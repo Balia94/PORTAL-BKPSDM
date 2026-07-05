@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cek Status Pengajuan Mutasi - BKPSDM</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand"><div class="logo">🏛️</div><div><h1>BKPSDM Kabupaten Aceh Timur</h1><p>Sistem Pengajuan Mutasi Pegawai ASN</p></div></div>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="pengajuan.html">Pengajuan</a>
+            <a href="cek-mutasi.html" class="active">Cek Status</a>
+            <a href="persyaratan.html">Persyaratan</a>
+            <a href="faq.html">FAQ</a>
+            <a href="kontak.html">Kontak</a>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="card central-box">
+            <h2>Cek Status Mutasi ASN</h2>
+            <p class="subtitle">Silakan ketik NIP resmi Anda untuk memvalidasi posisi berkas terkini.</p>
+            <div class="search-group">
+                <input id="nip" type="text" maxlength="18" placeholder="Masukkan 18 Digit NIP Pegawai...">
+                <button onclick="cekStatus()" class="btn">CEK STATUS BERKAS</button>
+            </div>
+            <div id="loading" class="hidden">Menghubungi server basis data, harap tunggu...</div>
+            <div id="hasil" class="card result-card hidden">
+                <h3>Lembar Hasil Pencarian</h3><hr>
+                <p><b>Nama Pegawai</b> : <span id="nama">-</span></p>
+                <p><b>NIP</b> : <span id="outnip">-</span></p>
+                <p><b>Status Berkas</b> : <span id="status" class="badge">-</span></p>
+                <p><b>Catatan Admin</b> : <span id="catatan">-</span></p>
+                <p><b>Update Terakhir</b> : <span id="update">-</span></p>
+            </div>
+            <div class="note-box">
+                <p>⚠️ <b>Pemberitahuan Teknis:</b> Pastikan parameter variabel <code>API</code> pada berkas <code>assets/js/main.js</code> telah disesuaikan dengan alamat URL Web App Apps Script Anda agar integrasi berjalan.</p>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">© 2026 BKPSDM Kabupaten Aceh Timur</footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
